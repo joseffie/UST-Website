@@ -1,0 +1,85 @@
+// Do not specify units of measurement in this varriables
+$layout-width: 1920; // <<- Layout full width
+$content-width: 1440; // <<- Layout container width
+$container-offset-no-units: 25; // <<- Container left and right padding
+$container-width-no-units: calc($content-width + ($container-offset-no-units * 2));
+
+$container-offset: $container-offset-no-units + px;
+$container-width: calc($content-width + ($container-offset-no-units * 2)) + px;
+
+// Breakpoints
+$breakpoint1440: 1439.98px;
+$breakpoint1248: 1247.98px;
+$breakpoint1024: 1023.98px;
+$breakpoint768: 767.98px;
+$breakpoint640: 639.98px;
+$breakpoint560: 559.98px;
+$breakpoint480: 479.98px;
+$breakpoint400: 399.98px;
+
+// Basic colors
+$white: #fff;
+$gray-100: #535670;
+$gray-80: #75788d;
+$gray-60: #989aa9;
+$gray-20: #dddde2;
+$gray-10: #eeeff1;
+
+$color-red: #d02f44;
+$color-red-light: #e3828f;
+
+$color-blue-light: #1e74ec;
+$color-blue-dark: #012c88;
+$color-blue-100: #03115f;
+$color-blue-80: #35417f;
+$color-blue-20: #cdcfdf;
+$color-blue-10: #e6e8ef;
+
+$color-pink-100: #79077b;
+$color-pink-80: #a960ab;
+
+// Semantic colors
+$color-main: $color-blue-light;
+$main-gradient: linear-gradient(130.67deg, #1e74ec 6.5%, #002984 100%);
+$color-success: #5cb75c;
+$color-danger: $color-red;
+$color-warning: #efac4d;
+
+$text-color: $gray-100;
+$body-bg: $white;
+
+// Main-navigation styles
+$nav-color: $white;
+$nav-text-color: $gray-20;
+$nav-text-color-active: $color-blue-100;
+$nav-opened-text-color: $color-blue-100;
+$nav-font-size: rem(16);
+
+$burger-color: $gray-10;
+$burger-color-active: $color-pink-80;
+
+// Fonts
+$font-size: rem(18);
+$font-size-sm: 0.8em;
+
+$font-family: 'Roboto', sans-serif;
+$font-family--primary: 'Gotham', sans-serif;
+$font-family--primary-narrow: 'GothamXNarrow', sans-serif;
+$font-family--secondary: 'Rubik', sans-serif;
+$font-family--logo: 'Inter', sans-serif;
+
+// Other
+$field-padding-vertical: rem(14);
+$field-padding-horizontal: rem(34);
+$btn-bg-color: $color-blue-dark;
+$btn-border-rad: 0;
+
+// Z-index
+$zi-dropdown: 1000;
+$zi-sticky: 1020;
+$zi-fixed: 1030;
+$zi-modal-backdrop: 1040;
+$zi-offcanvas: 1050;
+$zi-modal: 1060;
+$zi-popup: 1070;
+$zi-tooltip: 1080;

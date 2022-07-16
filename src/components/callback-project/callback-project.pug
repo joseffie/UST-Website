@@ -1,0 +1,57 @@
+include ../callback/callback.pug
+
+mixin callback-project-block()
+  section.callback.callback-project&attributes(attributes)
+    .callback__header.callback-project__header
+      .container
+        h4.h4-title Обсуждаем
+        h2.h2-title.callback-project__title Ваш проект
+        p.text
+          | Если вы хотите стать частью нашей команды,
+          | оставьте свои контакты и мы свяжемся с вами!
+    .container.callback__container
+      .callback__block.callback-project__block
+        form.callback-form__form(action='/')
+          .callback__row.callback__row--bordered.callback-project__row
+            .callback-project__content.callback-project-content
+              h5.h5-title.callback-project-content__title
+                | Персональная информация
+              p.text.text--smaller
+                | Расскажите, как к вам обращаться и <br>как
+                | можно связаться с вами
+            .callback-project-form
+              +callback-input('text', 'Имя *', true)
+              +callback-input('text', 'Компания')
+              +callback-input('email', 'Электронная почта *', true)
+              +callback-input('tel', 'Телефон *', true)
+
+          .callback__row.callback__row--bordered.callback-project__row
+            .callback-project__content.callback-project-content
+              h5.h5-title.callback-project-content__title
+                | Техническое задание
+              p.text.text--smaller
+                | Загрузите сюда свое ТЗ и/или оформите бриф
+            .callback-project-form
+              .callback-project-form__btn-wrap
+                p.callback-project-form__approximate-time
+                  | Оформление брифа может занять 15-25 минут
+                +btn('Оформить бриф', 'no-bg')
+              +callback-input('text', 'Ссылка на Техническое задание')
+
+          .callback__row.callback__row--bordered.callback-project__row
+            .callback-project__content.callback-project-content
+              h5.h5-title.callback-project-content__title
+                | О проекте
+            .callback-project-form
+              +callback-textarea('Что бы Вы хотели рассказать еще о своем проекте')
+              +callback-submit-warning()(class='callback-form__submit-warning--bg-on-pc')
+                | Ваши персональные данные обрабатываются в
+                | соответствии с нашей
+                | <a class='link' href='#'>Политикой
+                | конфиденциальности</a>
+
+          .callback__row.callback__row--bordered.callback__row--phantom-before.callback-project__row
+            .callback-project-form
+              .callback-form__submit-wrap.callback-project-form__submit-wrap
+                +callback-tip()
+                +btn('Подать заявку', 'rounded-on-mobile')(class='callback-project-form__submit', type='submit')

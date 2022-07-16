@@ -1,0 +1,10 @@
+extends ../base/pug/base.pug
+
+include ../components/callback-message/callback-message.pug
+
+append variables
+  -
+    var title = 'Контакты | Union Smart Technology'
+
+block content
+  +callback-message-block()(class='callback--mainscreen')

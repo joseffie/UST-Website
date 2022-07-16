@@ -1,0 +1,121 @@
+.cooperation {
+  @include adaptive-value('margin-bottom', 220, 120);
+
+  &__header {
+    @include adaptive-value('margin-bottom', 64, 24);
+  }
+
+  &__label {
+    margin-bottom: rem(8);
+  }
+
+  &__slider-wrap {
+    position: relative;
+  }
+
+  &__slider {
+    width: 100%;
+    height: auto;
+  }
+
+  &__btn {
+    &-prev,
+    &-next {
+      width: 23px !important;
+      color: $color-pink-80 !important;
+
+      &::after {
+        font-size: 40px !important;
+
+        @media (max-width: $breakpoint1248) {
+          font-size: 28px !important;
+        }
+
+        @media (max-width: $breakpoint768) {
+          display: none !important;
+        }
+      }
+    }
+
+    &-prev {
+      left: -30px !important;
+
+      @media (min-width: 1599.98px) {
+        left: -70px !important;
+      }
+
+      @media (max-width: $breakpoint1248) {
+        left: -1.5em !important;
+      }
+
+      @media (max-width: $breakpoint1024) {
+        left: -30px !important;
+      }
+    }
+
+    &-next {
+      right: -30px !important;
+
+      @media (min-width: 1599.98px) {
+        right: -70px !important;
+      }
+
+      @media (max-width: $breakpoint1248) {
+        right: -1.5em !important;
+      }
+
+      @media (max-width: $breakpoint1024) {
+        right: -30px !important;
+      }
+    }
+  }
+
+  &__bullets {
+    bottom: -40px !important;
+
+    .swiper-pagination-bullet {
+      margin: var(--swiper-pagination-bullet-horizontal-gap, 6px) !important;
+    }
+
+    .swiper-pagination-bullet-active {
+      background: $color-pink-80 !important;
+    }
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    height: auto !important;
+    background-color: #f8f9f9;
+
+    .text {
+      flex: 1 1 auto;
+    }
+  }
+
+  &__pic {
+    width: 100%;
+    margin-bottom: rem(24);
+  }
+
+  &__item-content {
+    padding: 0 rem(35) rem(20) rem(35);
+
+    &::after {
+      display: block;
+      width: 1px;
+      height: 1px;
+      content: '';
+    }
+  }
+
+  &__caption {
+    flex: 1 0 auto;
+    margin-bottom: rem(10);
+    background: $main-gradient;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+  }
+}

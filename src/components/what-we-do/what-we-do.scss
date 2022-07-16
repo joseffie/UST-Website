@@ -1,0 +1,118 @@
+.what-we-do {
+  @include adaptive-value('margin-bottom', 180, 80);
+
+  &__list {
+    padding: 0;
+    list-style: none;
+    counter-reset: what-we-do;
+  }
+
+  &__item {
+    display: flex;
+    gap: rem(40);
+    max-width: 60%;
+    @include adaptive-value('margin-bottom', 100, 60);
+
+    @media (max-width: $breakpoint1440) {
+      max-width: 75%;
+    }
+
+    @media (max-width: $breakpoint1024) {
+      max-width: 100%;
+    }
+
+    &::before {
+      display: inline-block;
+      color: $gray-20;
+      font-weight: 700;
+      line-height: 110%;
+      content: counter(what-we-do);
+      counter-increment: what-we-do;
+      @include adaptive-font(200, 40);
+
+      @media (max-width: $breakpoint640) {
+        display: none;
+      }
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__item-caption {
+    background: $main-gradient;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    @include adaptive-value('margin-bottom', 18, 5);
+  }
+
+  &__item-descr {
+    @include adaptive-value('margin-bottom', 40, 24);
+
+    @media (max-width: $breakpoint560) {
+      font-family: $font-family--secondary;
+    }
+  }
+
+  &__item-tip {
+    color: $gray-80;
+    font-family: $font-family;
+    @include adaptive-value('margin-bottom', 34, 16);
+
+    @media (max-width: $breakpoint560) {
+      font-family: $font-family--secondary;
+    }
+  }
+
+  &__client-logos {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: rem(34);
+    padding: 0;
+    list-style: none;
+    @include adaptive-value('gap', 40, 30);
+  }
+
+  &__client-logo {
+    @include adaptive-value('width', 110, 64);
+    @include adaptive-value('height', 110, 64);
+  }
+
+  &__item-footer {
+    @media (max-width: $breakpoint480) {
+      display: flex;
+      gap: rem(10);
+      align-items: center;
+      justify-content: space-between;
+
+      * {
+        flex: 0 1 50%;
+      }
+    }
+
+    .text {
+      margin-bottom: rem(15);
+      color: $gray-80;
+
+      @media (max-width: $breakpoint480) {
+        margin-bottom: 0;
+
+        br {
+          display: none;
+        }
+      }
+    }
+  }
+
+  &__start-btn {
+    .view-on-pc {
+      display: flex;
+      align-items: center;
+      @include adaptive-value('gap', 24, 8);
+    }
+  }
+}

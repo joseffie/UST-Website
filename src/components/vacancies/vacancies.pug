@@ -1,0 +1,430 @@
+include ../tag/tag.pug
+
+section.vacancies
+  .container
+    .vacancies__header
+      h2.h2-title.vacancies__title С нами классно
+      p.text
+        | В нашей команде работают исключительно
+        | высококвалифицированные специалисты, которые
+        | обладают качественными знаниями, навыками и
+        | опытом работы с крупными проектами. Мы заботимся
+        | о том, чтобы каждый сотрудник имел возможность
+        | обучаться и развивать себя в любимом деле. А
+        | также о том, чтобы работа была вашим безопасным
+        | местом, и вы чувствовали себя комфортно,
+        | выполняя свои задачи.
+    ul.accordion.vacancies-accordion
+      li.accordion__tab
+        button.h4-title.accordion__btn.vacancies-accordion__btn.active(data-accordion-btn='5')
+          | Java-программист (Middle-Senior)
+          +tag('Удалённо')
+          +tag('Словения')
+        .accordion__content.active(data-accordion-content='5')
+          .vacancies-accordion__section
+            h6.h6-title.vacancies-accordion__title Навыки
+            ul.vacancies-accordion__tag-list
+              li.vacancies-accordion__tag-item
+                +tag('Бэкенд')
+              li.vacancies-accordion__tag-item
+                +tag('Java')
+              li.vacancies-accordion__tag-item
+                +tag('SQL')
+              li.vacancies-accordion__tag-item
+                +tag('ООП')
+              li.vacancies-accordion__tag-item
+                +tag('PostgreSQL')
+              li.vacancies-accordion__tag-item
+                +tag('Java Spring Framework')
+          .vacancies-accordion__section
+            h6.h6-title.vacancies-accordion__title
+              | Местоположение и тип занятости
+            ul.vacancies-accordion__tag-list
+              li.vacancies-accordion__tag-item
+                +tag('Полный рабочий день')
+              li.vacancies-accordion__tag-item
+                +tag('Можно удалённо')
+          .vacancies-accordion__section
+            h6.h6-title.vacancies-accordion__title Обязанности
+            ul.vacancies-accordion__list
+              li.vacancies-accordion__item
+                p.text.text--small
+                  | Участие в разработке серверной части сервиса
+                  | начисления кешбека;
+              li.vacancies-accordion__item
+                p.text.text--small
+                  | Покрытие написанных сервисов тестами.
+                  | Согласование реализуемых методов и подходов
+                  | с командой разработчиков клиентов;
+              li.vacancies-accordion__item
+                p.text.text--small
+                  | Реализация логики уведомления клиентов о
+                  | происходящих событиях;
+              li.vacancies-accordion__item
+                p.text.text--small
+                  | Для сервера используется Spring Boot Framework.
+          .vacancies-accordion__section
+            h6.h6-title.vacancies-accordion__title Требования
+            ul.vacancies-accordion__list
+              li.vacancies-accordion__item
+                p.text.text--small
+                  | Опыт коммерческой разработки back-end на Java
+                  | от 1 года;
+              li.vacancies-accordion__item
+                p.text.text--small
+                  | Опыт работы с Spring Framework;
+              li.vacancies-accordion__item
+                p.text.text--small
+                  | Умение писать unit-тесты и понимание,
+                  | зачем это нужно;
+              li.vacancies-accordion__item
+                p.text.text--small
+                  | Опыт работы с PostgreSQL, Oracle (или
+                  | другими классическими базами данных);
+              li.vacancies-accordion__item
+                p.text.text--small
+                  | Умение находить и использовать новые
+                  | сервисы и технологии.
+          .vacancies-accordion__section
+            h6.h6-title.vacancies-accordion__title Условия
+            ul.vacancies-accordion__list
+              li.vacancies-accordion__item
+                p.text.text--small
+                  | Активная разработка и возможность увидеть
+                  | созданную с вами систему на бою;
+              li.vacancies-accordion__item
+                p.text.text--small
+                  | Каждый специалист уникален, а потому уровень
+                  | заработной платы обсуждается индивидуально;
+              li.vacancies-accordion__item
+                p.text.text--small
+                  | Дружелюбная, не бюрократизированная обстановка;
+              li.vacancies-accordion__item
+                p.text.text--small
+                  | Оформление по ТК;
+              li.vacancies-accordion__item
+                p.text.text--small
+                  | Удаленная работа. При необходимости встречаемся
+                  | в неформальной обстановке;
+              li.vacancies-accordion__item
+                p.text.text--small
+                  | Стабильная зарплата;
+              li.vacancies-accordion__item
+                p.text.text--small
+                  | Разработка на бою.
+          .vacancies-accordion__socials
+            a.vacancies-accordion__social(href='#')
+              img(src='@img/work-socials/linkedin-msg.svg', alt='LinkedIn Message')
+            a.vacancies-accordion__social(href='#')
+              img(src='@img/work-socials/habr.png', alt='Habr')
+            a.vacancies-accordion__social(href='#')
+              img(src='@img/work-socials/hh.png', alt='hh.ru')
+            a.vacancies-accordion__social(href='#')
+              img(src='@img/work-socials/linkedin.svg', alt='LinkedIn')
+
+      li.accordion__tab
+        button.h4-title.accordion__btn.vacancies-accordion__btn(data-accordion-btn='6')
+          | IOS-разработчик (Middle-Senior)
+          +tag('Словения')
+          +tag('Россия')
+        .accordion__content(data-accordion-content='6')
+          .vacancies-accordion__section
+            h6.h6-title.vacancies-accordion__title Навыки
+            ul.vacancies-accordion__tag-list
+              li.vacancies-accordion__tag-item
+                +tag('Swift')
+              li.vacancies-accordion__tag-item
+                +tag('iOS')
+              li.vacancies-accordion__tag-item
+                +tag('iOS SDK')
+              li.vacancies-accordion__tag-item
+                +tag('ООП')
+              li.vacancies-accordion__tag-item
+                +tag('UIKit')
+              li.vacancies-accordion__tag-item
+                +tag('Мобильность')
+          .vacancies-accordion__section
+            h6.h6-title.vacancies-accordion__title
+              | Местоположение и тип занятости
+            ul.vacancies-accordion__tag-list
+              li.vacancies-accordion__tag-item
+                +tag('Словения')
+              li.vacancies-accordion__tag-item
+                +tag('Россия')
+              li.vacancies-accordion__tag-item
+                +tag('Можно удалённо')
+          .vacancies-accordion__section
+            h6.h6-title.vacancies-accordion__title Обязанности
+            ul.vacancies-accordion__list
+              li.vacancies-accordion__item
+                p.text.text--small
+                  | Разработка приложений и их обновленных версий
+                  | для девайсов, функционирующих на операционной
+                  | системе IOS;
+              li.vacancies-accordion__item
+                p.text.text--small
+                  | Отладка и тестирование приложений;
+              li.vacancies-accordion__item
+                p.text.text--small
+                  | Создание технической документации для
+                  | созданных программ.
+              li.vacancies-accordion__item
+                p.text.text--small
+                  | Обработка обратной связи от пользователей;
+          .vacancies-accordion__section
+            h6.h6-title.vacancies-accordion__title Требования
+            ul.vacancies-accordion__list
+              li.vacancies-accordion__item
+                p.text.text--small
+                  | Опыт коммерческой разработки на Swift
+                  | от 1 года;
+              li.vacancies-accordion__item
+                p.text.text--small
+                  | Понимание принципов работы клиент-серверных
+                  | и мобильных приложений;
+              li.vacancies-accordion__item
+                p.text.text--small
+                  | Знание основных шаблонов проектирования и
+                  | принципов объектно-ориентированного
+                  | программирования;
+              li.vacancies-accordion__item
+                p.text.text--small
+                  | Знание фреймворка Realm;
+              li.vacancies-accordion__item
+                p.text.text--small
+                  | Знание основных фреймворков iOS SDK
+                  | (UIKit, MapKit, WKWebView, PushKit,
+                  | UserNotifications).
+          .vacancies-accordion__section
+            h6.h6-title.vacancies-accordion__title Условия
+            ul.vacancies-accordion__list
+              li.vacancies-accordion__item
+                p.text.text--small
+                  | Активная разработка и возможность увидеть
+                  | созданную с вами систему на бою;
+              li.vacancies-accordion__item
+                p.text.text--small
+                  | Каждый специалист уникален, а потому уровень
+                  | заработной платы обсуждается индивидуально;
+              li.vacancies-accordion__item
+                p.text.text--small
+                  | Дружелюбная, не бюрократизированная обстановка;
+              li.vacancies-accordion__item
+                p.text.text--small
+                  | Оформление по ТК;
+              li.vacancies-accordion__item
+                p.text.text--small
+                  | Удаленная работа. При необходимости встречаемся
+                  | в неформальной обстановке;
+              li.vacancies-accordion__item
+                p.text.text--small
+                  | Стабильная зарплата;
+          .vacancies-accordion__socials
+            a.vacancies-accordion__social(href='#')
+              img(src='@img/work-socials/linkedin-msg.svg', alt='LinkedIn Message')
+            a.vacancies-accordion__social(href='#')
+              img(src='@img/work-socials/habr.png', alt='Habr')
+            a.vacancies-accordion__social(href='#')
+              img(src='@img/work-socials/hh.png', alt='hh.ru')
+            a.vacancies-accordion__social(href='#')
+              img(src='@img/work-socials/linkedin.svg', alt='LinkedIn')
+
+      li.accordion__tab
+        button.h4-title.accordion__btn.vacancies-accordion__btn(data-accordion-btn='7')
+          | Бизнес-аналитик (Senior, B2+)
+          +tag('Словения')
+          +tag('Работа в офисе')
+        .accordion__content(data-accordion-content='7')
+          .vacancies-accordion__section
+            h6.h6-title.vacancies-accordion__title Навыки
+            ul.vacancies-accordion__tag-list
+              li.vacancies-accordion__tag-item
+                +tag('Проектирование бизнес-процессов')
+              li.vacancies-accordion__tag-item
+                +tag('1С: Документооборот')
+              li.vacancies-accordion__tag-item
+                +tag('Agile-методология')
+              li.vacancies-accordion__tag-item
+                +tag('PostgreSQL')
+          .vacancies-accordion__section
+            h6.h6-title.vacancies-accordion__title
+              | Местоположение и тип занятости
+            ul.vacancies-accordion__tag-list
+              li.vacancies-accordion__tag-item
+                +tag('Словения')
+              li.vacancies-accordion__tag-item
+                +tag('Работа в офисе')
+          .vacancies-accordion__section
+            h6.h6-title.vacancies-accordion__title Обязанности
+            ul.vacancies-accordion__list
+              li.vacancies-accordion__item
+                p.text.text--small
+                  | Построение бизнес-процессов и модели
+                  | предметной области;
+              li.vacancies-accordion__item
+                p.text.text--small
+                  | Формулирование функциональных и нефункциональных
+                  | требований к системе, требований к интеграции с
+                  | другими системами;
+              li.vacancies-accordion__item
+                p.text.text--small
+                  | Формирование и проверка гипотез,
+                  | проведение custdev;
+              li.vacancies-accordion__item
+                p.text.text--small
+                  | Участие в планировании, постановке,
+                  | оценке задач беклога и спринта;
+              li.vacancies-accordion__item
+                p.text.text--small
+                  | Участие в тестировании и
+                  | приёмо-сдаточных испытаниях.
+          .vacancies-accordion__section
+            h6.h6-title.vacancies-accordion__title Требования
+            ul.vacancies-accordion__list
+              li.vacancies-accordion__item
+                p.text.text--small
+                  | Аналогичный опыт работы в роли
+                  | бизнес-аналитика от 3 лет;
+              li.vacancies-accordion__item
+                p.text.text--small
+                  | Умение общаться с заказчиком, преобразовывать
+                  | его пожелания в требования, предлагать своё
+                  | решение;
+              li.vacancies-accordion__item
+                p.text.text--small
+                  | Навыки описания бизнес-процессов и требований
+                  | к ним с использованием user story и одной или
+                  | нескольких нотаций (BPMN, EPC, IDEF, UML);
+              li.vacancies-accordion__item
+                p.text.text--small
+                  | Опыт работы по Agile-методологии,
+                  | реализации MVP-решений;
+              li.vacancies-accordion__item
+                p.text.text--small
+                  | Желание вырасти до позиции руководителя проекта
+                  | (Вы сможете поучаствовать в защите бюджета,
+                  | приоритизации бэклога и т.д.).
+          .vacancies-accordion__section
+            h6.h6-title.vacancies-accordion__title Условия
+            ul.vacancies-accordion__list
+              li.vacancies-accordion__item
+                p.text.text--small
+                  | Каждый специалист уникален, а потому уровень
+                  | заработной платы обсуждается индивидуально;
+              li.vacancies-accordion__item
+                p.text.text--small
+                  | Дружелюбная, не бюрократизированная обстановка;
+              li.vacancies-accordion__item
+                p.text.text--small
+                  | Спорт — корпоративные соревнования по футболу,
+                  | баскетболу и волейболу, различные спорт-программы
+                  | или компенсация вашего фитнес-абонемента;
+              li.vacancies-accordion__item
+                p.text.text--small
+                  | Оформление по ТК;
+              li.vacancies-accordion__item
+                p.text.text--small
+                  | Стабильная зарплата.
+          .vacancies-accordion__socials
+            a.vacancies-accordion__social(href='#')
+              img(src='@img/work-socials/linkedin-msg.svg', alt='LinkedIn Message')
+            a.vacancies-accordion__social(href='#')
+              img(src='@img/work-socials/habr.png', alt='Habr')
+            a.vacancies-accordion__social(href='#')
+              img(src='@img/work-socials/hh.png', alt='hh.ru')
+            a.vacancies-accordion__social(href='#')
+              img(src='@img/work-socials/linkedin.svg', alt='LinkedIn')
+
+      li.accordion__tab
+        button.h4-title.accordion__btn.vacancies-accordion__btn(data-accordion-btn='8')
+          | Помощник маркетолога (Junior)
+          +tag('Работа в офисе')
+          +tag('Россия')
+        .accordion__content(data-accordion-content='8')
+          .vacancies-accordion__section
+            h6.h6-title.vacancies-accordion__title Навыки
+            ul.vacancies-accordion__tag-list
+              li.vacancies-accordion__tag-item
+                +tag('Копирайтинг')
+              li.vacancies-accordion__tag-item
+                +tag('Маркетинговая стратегия')
+              li.vacancies-accordion__tag-item
+                +tag('Маркетинговая стратегия')
+              li.vacancies-accordion__tag-item
+                +tag('Анализ целевой аудитории')
+              li.vacancies-accordion__tag-item
+                +tag('Маркетинговые исследования')
+          .vacancies-accordion__section
+            h6.h6-title.vacancies-accordion__title
+              | Местоположение и тип занятости
+            ul.vacancies-accordion__tag-list
+              li.vacancies-accordion__tag-item
+                +tag('Словения')
+              li.vacancies-accordion__tag-item
+                +tag('Работа в офисе')
+          .vacancies-accordion__section
+            h6.h6-title.vacancies-accordion__title Обязанности
+            ul.vacancies-accordion__list
+              li.vacancies-accordion__item
+                p.text.text--small
+                  | Анализ рекламных активностей;
+              li.vacancies-accordion__item
+                p.text.text--small
+                  | Работа над новыми рекламными каналами,
+                  | аналитика, корректировка;
+              li.vacancies-accordion__item
+                p.text.text--small
+                  | Участие в доработке позиционирования для
+                  | текущих продуктов/услуг и разработке для новых;
+              li.vacancies-accordion__item
+                p.text.text--small
+                  | Разработка (в команде) маркетинговых воронок
+                  | и дальнейшая реализация отдельных ее этапов;
+              li.vacancies-accordion__item
+                p.text.text--small
+                  | Контроль рекламных бюджетов.
+          .vacancies-accordion__section
+            h6.h6-title.vacancies-accordion__title Требования
+            ul.vacancies-accordion__list
+              li.vacancies-accordion__item
+                p.text.text--small
+                  | Релевантный опыт работы от 1 года;
+              li.vacancies-accordion__item
+                p.text.text--small
+                  | Умение работать в команде и самостоятельно;
+              li.vacancies-accordion__item
+                p.text.text--small
+                  | Умение анализировать конкурентов, портрет целевой
+                  | аудитории, сегмент рынка, рекламные каналы и
+                  | подбирать каналы под каждый продукт.
+          .vacancies-accordion__section
+            h6.h6-title.vacancies-accordion__title Условия
+            ul.vacancies-accordion__list
+              li.vacancies-accordion__item
+                p.text.text--small
+                  | Возможность работать с большими бюджетами;
+              li.vacancies-accordion__item
+                p.text.text--small
+                  | Каждый специалист уникален, а потому уровень
+                  | заработной платы обсуждается индивидуально;
+              li.vacancies-accordion__item
+                p.text.text--small
+                  | Дружелюбная, не бюрократизированная обстановка;
+              li.vacancies-accordion__item
+                p.text.text--small
+                  | Оформление по ТК;
+              li.vacancies-accordion__item
+                p.text.text--small
+                  | Стабильная зарплата;
+              li.vacancies-accordion__item
+                p.text.text--small
+                  | Свобода для тестирования гипотез.
+          .vacancies-accordion__socials
+            a.vacancies-accordion__social(href='#')
+              img(src='@img/work-socials/linkedin-msg.svg', alt='LinkedIn Message')
+            a.vacancies-accordion__social(href='#')
+              img(src='@img/work-socials/habr.png', alt='Habr')
+            a.vacancies-accordion__social(href='#')
+              img(src='@img/work-socials/hh.png', alt='hh.ru')
+            a.vacancies-accordion__social(href='#')
+              img(src='@img/work-socials/linkedin.svg', alt='LinkedIn')

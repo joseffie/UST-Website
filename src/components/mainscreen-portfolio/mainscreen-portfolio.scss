@@ -1,0 +1,42 @@
+.mainscreen-portfolio {
+  background-color: $gray-100;
+  background-image: url('../img/mainscreen-bgs/bg4.webp');
+  background-image: url('../img/mainscreen-bgs/bg4.png');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-attachment: fixed;
+  @include adaptive-value('margin-bottom', 180, 80);
+
+  .btn {
+    @media (max-width: $breakpoint480) {
+      display: block;
+    }
+  }
+
+  &__header {
+    max-width: 45%;
+    margin-bottom: rem(64);
+    color: $white;
+
+    @media (max-width: $breakpoint1248) {
+      max-width: 65%;
+    }
+
+    @media (max-width: $breakpoint1024) {
+      max-width: 80%;
+    }
+
+    @media (max-width: $breakpoint640) {
+      max-width: 100%;
+    }
+
+    * {
+      color: inherit;
+    }
+  }
+
+  &__title {
+    margin-bottom: rem(16);
+  }
+}

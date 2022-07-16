@@ -1,0 +1,71 @@
+footer.footer
+  .container
+    .footer__row
+      .footer__block.footer__contacts-block
+        .footer__contacts
+          h6.h6-title.footer__team-name Российская команда
+          .footer__meta
+            a.text.text--small.footer__email(href='mailto:contact@unionsmarttech.ru')
+              | contact@unionsmart&shy;tech.ru
+            a.text.text--label(href='tel:+79119329029') +7&nbsp;911&nbsp;932-90-29
+          address.text.text--small
+            | 24 Entuziastov street,
+            | <br>Saint Petersburg, 191119
+        .footer__contacts
+          h6.h6-title.footer__team-name Словакская команда
+          .footer__meta
+            a.text.text--small.footer__email(href='mailto:contact@unionsmarttech.ru')
+              | contact@unionsmart&shy;tech.ru
+            a.text.text--label(href='tel:+421494539852') +421&nbsp;494&nbsp;539-852
+          address.text.text--small
+            | 24 Entuziastov street,
+            | <br>Saint Petersburg, 191119
+      .footer__block.footer__links-block
+        ul.footer__links
+          li.footer__link
+            +btn('Главная', 'uppercase')(href='index.html')
+          li.footer__link
+            +btn('Команда', 'uppercase')(href='team.html')
+          li.footer__link
+            +btn('Услуги', 'uppercase')(href='services.html')
+        ul.footer__links
+          li.footer__link
+            +btn('Карьера', 'uppercase')(href='career.html')
+          li.footer__link
+            +btn('Портфолио', 'uppercase')(href='portfolio.html')
+          li.footer__link
+            +btn('Контакты', 'uppercase')(href='contacts.html')
+        ul.footer__links.footer__links--socials
+          li.footer__link
+            +btn('Instagram', 'uppercase')(class='icon-on-mobile', href='#')
+            a.footer__social(href='#')
+              svg(width='32', height='32')
+                use(xlink:href='@img/sprite.svg#instagram')
+
+          li.footer__link
+            +btn('Facebook', 'uppercase')(class='icon-on-mobile', href='#')
+            a.footer__social(href='#')
+              svg(width='32', height='32')
+                use(xlink:href='@img/sprite.svg#facebook')
+
+          li.footer__link
+            a.footer__social(href='#')
+              svg(width='32', height='32')
+                use(xlink:href='@img/sprite.svg#google')
+
+          li.footer__link
+            +btn('Dribbble', 'uppercase')(class='icon-on-mobile', href='#')
+            a.footer__social(href='#')
+              svg(width='32', height='32')
+                use(xlink:href='@img/sprite.svg#dribble')
+
+          li.footer__link
+            +btn('Linkedin', 'uppercase')(class='icon-on-mobile', href='#')
+            a.footer__social(href='#')
+              svg(width='32', height='32')
+                use(xlink:href='@img/sprite.svg#linkedin')
+    .footer__bottom
+      p.text.text--label.footer__copyright Разработка: студия ЯР
+      .footer__bottom-links
+        +btn('Политика конфиденциальности', 'link')(href='#')
+        +btn('Cookies policy', 'link')(class='del-on-mobile', href='#')

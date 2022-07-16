@@ -1,0 +1,20 @@
+include ../../mixins/mixins.pug
+include ../../components/btn/btn.pug
+
+block variables
+
+doctype html
+html.page(lang='en')
+  include ./head.pug
+
+  body
+    .wrapper
+      main.wrapper__content
+        block content
+
+      include ../../components/header/header.pug
+
+      include ../../components/footer/footer.pug
+
+    block script
+      script(src='js/index.min.js')

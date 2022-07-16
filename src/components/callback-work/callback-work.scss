@@ -1,0 +1,87 @@
+.callback-work {
+  @include adaptive-value('margin-bottom', 110, 40);
+
+  @media (max-width: $breakpoint480) {
+    margin-bottom: 0;
+  }
+
+  &__header {
+    color: $gray-10;
+    background-color: $gray-100;
+    background-image: url('../img/summary-bg.webp');
+    background-image: url('../img/summary-bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    * {
+      color: inherit;
+    }
+  }
+
+  &__title {
+    margin: rem(8) 0 rem(24) 0;
+  }
+
+  &__block {
+    background-color: $gray-10;
+
+    @media (max-width: $breakpoint480) {
+      padding-top: rem(40);
+      padding-bottom: rem(40);
+    }
+  }
+
+  &__row {
+    @media (max-width: $breakpoint1024) {
+      flex-wrap: wrap;
+      gap: rem(20);
+    }
+  }
+}
+
+.callback-work-content,
+.callback-work-form {
+  flex: 0 1 50%;
+
+  @media (max-width: $breakpoint1024) {
+    flex: 1 1 100%;
+  }
+}
+
+// BLOCK: Callback Content Block
+.callback-work-content {
+  &__title {
+    margin-bottom: rem(8);
+  }
+}
+
+// BLOCK: Callback Form Block
+.callback-work-form {
+  &__file-block {
+    display: flex;
+    gap: rem(18);
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: rem(16);
+
+    @media (max-width: $breakpoint560) {
+      .callback-form__file-input-wrap {
+        order: 2;
+      }
+
+      .callback-work-form__file-tip {
+        order: 1;
+      }
+    }
+
+    .callback-form__file-input-wrap,
+    .callback-work-form__file-tip {
+      flex: 0 1 50%;
+    }
+  }
+
+  &__file-tip {
+    color: $gray-60;
+    line-height: 140%;
+  }
+}

@@ -1,0 +1,20 @@
+section.benefits
+  .container
+    .benefits__header
+      h4.h4-title Наши
+      h2.h2-title.benefits__title Преимущества
+      p.text
+        | Основная ценность нашей компании - создание качественного продукта
+        | и удовлетворение потребностей клиента. Поэтому перед началом разработки
+        | мы проводим маркетинговые исследования и помогаем клиенту
+        | определить стратегию развития продукта.
+    ul.benefits__grid
+      each item in benefitsList
+        li.benefits__item
+          img.benefits__icon(src='@img/benefit-icons/' + item.iconpath, alt=item.alt)
+          h5.h5-title.benefits__item-title= item.title
+          p.text--small= item.text
+
+          if (item.paragraphs)
+            each subitem in item.paragraphs
+              p.text--small= subitem.text

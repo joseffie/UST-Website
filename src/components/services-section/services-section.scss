@@ -1,0 +1,63 @@
+.services-section {
+  padding: rem(110) 0;
+  background-color: $color-blue-10;
+  @include adaptive-value('margin-bottom', 110, 40);
+
+  @media (max-width: $breakpoint768) {
+    padding: rem(80) 0;
+  }
+
+  &__header {
+    @include adaptive-value('margin-bottom', 64, 40);
+
+    @media (max-width: $breakpoint560) {
+      text-align: center;
+    }
+  }
+
+  &__label {
+    margin-bottom: rem(8);
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: rem(42);
+    align-items: center;
+    padding: 0;
+    list-style: none;
+
+    @media (max-width: $breakpoint1248) {
+      grid-template-columns: repeat(4, 1fr);
+      gap: rem(60) rem(40);
+    }
+
+    @media (max-width: $breakpoint768) {
+      grid-template-columns: repeat(3, 1fr);
+      gap: rem(65) rem(30);
+    }
+
+    @media (max-width: $breakpoint560) {
+      grid-template-columns: repeat(2, 1fr);
+      gap: rem(70) rem(25);
+    }
+  }
+
+  &__item {
+    text-align: center;
+  }
+
+  &__icon {
+    width: 64px;
+    height: 64px;
+    @include adaptive-value('margin-bottom', 32, 13);
+  }
+
+  &__service-name {
+    background: $main-gradient;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+  }
+}

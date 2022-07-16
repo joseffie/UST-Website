@@ -1,0 +1,14 @@
+section.why
+  .container
+    h4.h4-title.why__label О нас
+    .why__row
+      img.why__img(src='@img/why-pic.png', alt='Начало дня в UST')
+      .why__content
+        h4.h4-title.why__label.why__label--mobile О нас
+        h2.h2-title.why__title Почему UST?
+        .why__text
+          each item in whyText
+            p.text--small.why__paragraph!= item.text
+        .why__buttons
+          +btn('Вакансии', 'no-bg,no-mobile')(href='#')
+          +btn('Читать далее', 'transparent-on-mobile')(href='#')

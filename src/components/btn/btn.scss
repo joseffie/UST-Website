@@ -1,0 +1,144 @@
+.btn {
+  display: inline-block;
+  box-sizing: border-box;
+  max-width: 100%;
+  padding: $field-padding-vertical $field-padding-horizontal;
+  overflow: hidden;
+  color: $gray-10;
+  font-weight: 500;
+  font-family: inherit;
+  line-height: 100%;
+  white-space: nowrap;
+  text-align: center;
+  text-transform: none;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  vertical-align: middle;
+  background-color: $color-main;
+  background-image: none;
+  border: 2px solid $color-main;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  user-select: none;
+  @include adaptive-font(16, 14);
+
+  @include hover {
+    background-color: darken($color-main, 10%);
+    border-color: darken($color-main, 10%);
+  }
+
+  .view-on-pc {
+    display: inline;
+
+    @media (max-width: $breakpoint480) {
+      display: none;
+    }
+  }
+
+  .view-on-mobile {
+    display: none;
+
+    @media (max-width: $breakpoint480) {
+      display: inline;
+    }
+  }
+
+  &--link {
+    padding: 0;
+    color: $color-pink-80;
+    font-weight: 700;
+    background: none;
+    border: 0;
+    @include adaptive-font(14, 11);
+
+    @include hover {
+      color: $color-pink-100;
+      background-color: rgb(0 0 0 / 0%);
+      border-color: rgb(0 0 0 / 0%);
+    }
+  }
+
+  &--uppercase {
+    padding: 0;
+    color: inherit;
+    font-weight: 325;
+    font-size: rem(16);
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    background: none;
+    border: 0;
+
+    @include hover {
+      color: inherit;
+      background-color: rgb(0 0 0 / 0%);
+      border-color: rgb(0 0 0 / 0%);
+    }
+  }
+
+  &--no-bg {
+    color: $color-main;
+    background-color: $white;
+
+    @include hover {
+      color: $gray-10;
+      background-color: darken($color-main, 10%);
+      border-color: darken($color-main, 10%);
+    }
+  }
+
+  &--transparent-on-mobile {
+    @media (max-width: $breakpoint480) {
+      padding: 0;
+      color: $color-main;
+      background-color: rgb(0 0 0 / 0%);
+      border-color: rgb(0 0 0 / 0%);
+
+      @include hover {
+        color: darken($color-main, 10%);
+        background-color: rgb(0 0 0 / 0%);
+        border-color: rgb(0 0 0 / 0%);
+      }
+
+      &:focus {
+        color: darken($color-main, 10%);
+      }
+    }
+  }
+
+  &--transparent {
+    padding: 0;
+    color: $color-main;
+    background-color: rgb(0 0 0 / 0%);
+    border-color: rgb(0 0 0 / 0%);
+
+    @include hover {
+      color: darken($color-main, 10%);
+      background-color: rgb(0 0 0 / 0%);
+      border-color: rgb(0 0 0 / 0%);
+    }
+
+    &:focus {
+      color: darken($color-main, 10%);
+    }
+  }
+
+  &--rounded-on-mobile {
+    @media (max-width: $breakpoint480) {
+      border-radius: 8px;
+    }
+  }
+
+  &--no-mobile {
+    @media (max-width: $breakpoint480) {
+      display: none;
+    }
+  }
+
+  &--mobile-only {
+    display: none;
+
+    @media (max-width: $breakpoint480) {
+      display: block;
+    }
+  }
+}

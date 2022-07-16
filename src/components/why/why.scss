@@ -1,0 +1,83 @@
+.why {
+  @include adaptive-value('margin-bottom', 180, 80);
+
+  @media (max-width: $breakpoint480) {
+    margin-top: 0;
+  }
+
+  .container {
+    @media (max-width: $breakpoint480) {
+      padding: 0;
+    }
+  }
+
+  &__row {
+    display: flex;
+    justify-content: space-between;
+    @include adaptive-value('gap', 40, 24);
+
+    @media (max-width: $breakpoint1024) {
+      flex-wrap: wrap;
+    }
+  }
+
+  &__content {
+    @media (max-width: $breakpoint480) {
+      padding: 0 rem(20);
+    }
+  }
+
+  &__label {
+    @include adaptive-value('margin-bottom', 24, 8);
+
+    @media (max-width: $breakpoint480) {
+      display: none;
+    }
+
+    &--mobile {
+      display: none;
+
+      @media (max-width: $breakpoint480) {
+        display: block;
+      }
+    }
+  }
+
+  &__img {
+    flex: 0 1 55%;
+    width: 100%;
+
+    @media (max-width: $breakpoint1024) {
+      flex: 1 1 100%;
+    }
+  }
+
+  &__content {
+    flex: 0 1 45%;
+
+    @media (max-width: $breakpoint1024) {
+      flex: 1 1 100%;
+    }
+  }
+
+  &__title {
+    @include adaptive-value('margin-bottom', 24, 16);
+  }
+
+  &__buttons {
+    display: flex;
+    gap: rem(20);
+    align-items: center;
+    justify-content: space-between;
+
+    .btn {
+      flex: 0 1 50%;
+
+      @media (max-width: $breakpoint480) {
+        flex: 1 1 100%;
+        margin-right: rem(8);
+        text-align: right;
+      }
+    }
+  }
+}

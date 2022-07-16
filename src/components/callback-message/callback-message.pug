@@ -1,0 +1,79 @@
+include ../callback/callback.pug
+
+mixin callback-message-block()
+  section.callback.callback-message&attributes(attributes)
+    .callback__header.callback-message__header
+      .container
+        h4.h4-title Связаться
+        h2.h2-title.callback-message__title
+          | Готовы предложить Вам
+          | <br>лучшие IT-решения
+    .container.callback__container
+      .callback__block.callback-message__block
+        .callback__row.callback-message__row
+          .callback__contacts-block.callback-contacts
+            .callback-contacts__section
+              h4.h4-title.callback-contacts__title Есть идея?
+              p.text.text--smaller.callback-contacts__text
+                | У вас есть уже существующий проект, который вы хотите усовершенствовать?
+                | Вы хотите воплотить в жизнь смелую идею, но вам нужна помощь? Или вы вообще
+                | не знаете, с чего начать реализацию проекта?
+            .callback-contacts__section
+              ul.callback-contacts__meta
+                li.callback-contacts__item
+                  h6.h6-title.callback-contacts__item-title Словения
+                  a.text.text--label.callback-contacts__contact(href='mailto:contact@unionsmarttech.ru')
+                    | contact@unionsmarttech.ru
+                  a.text.text--small.callback-contacts__contact(href='tel:+421494539852')
+                    | +421&nbsp;494&nbsp;539-852
+
+                li.callback-contacts__item
+                  h6.h6-title.callback-contacts__item-title Россия
+                  a.text.text--label.callback-contacts__contact(href='mailto:contact@unionsmarttech.ru')
+                    | contact@unionsmarttech.ru
+                  a.text.text--small.callback-contacts__contact(href='tel:+79119329029')
+                    | +7&nbsp;911&nbsp;932-90-29
+            ul.callback-contacts__socials
+              li.callback-contacts__social
+                a(href='#')
+                  svg(width='32', height='32')
+                    use(xlink:href='@img/sprite.svg#linkedin')
+              li.callback-contacts__social
+                a(href='#')
+                  svg(width='32', height='32')
+                    use(xlink:href='@img/sprite.svg#google')
+              li.callback-contacts__social
+                a(href='#')
+                  svg(width='32', height='32')
+                    use(xlink:href='@img/sprite.svg#facebook')
+              li.callback-contacts__social
+                a(href='#')
+                  svg(width='32', height='32')
+                    use(xlink:href='@img/sprite.svg#dribble')
+              li.callback-contacts__social
+                a(href='#')
+                  svg(width='32', height='32')
+                    use(xlink:href='@img/sprite.svg#instagram')
+          .callback-form.callback-form--message
+            h3.h3-title.callback-form__title.callback-form--message__title
+              | Связаться с нами
+            p.text.text--small.callback-form__descr.callback-form--message__descr
+              | Оставьте свою контактную информацию, и
+              | мы&nbsp;с радостью свяжемся с вами!
+            form.callback-form__form()
+              +callback-input('text', 'Имя *', true)
+              +callback-input('text', 'Компания')
+              +callback-input('email', 'Электронная почта *', true)
+              +callback-textarea('Сообщение')
+              +callback-submit-warning(true)
+                | Ваши персональные данные обрабатываются в соответствии
+                | с нашей <a class='link' href='#'>Политикой конфиденциальности</a>
+              +callback-tip()
+              .callback-form__submit-wrap.callback-form--message__submit-wrap
+                +btn('', 'rounded-on-mobile')(class='callback-form__submit', type='submit')
+                  span.view-on-pc Отправить
+                  span.view-on-mobile Подать заявку
+                +callback-submit-warning()
+                  | Нажимая на кнопку, вы соглашаетесь <br>
+                  | с <a class='link' href='#'>Политикой
+                  | конфиденциальности</a>

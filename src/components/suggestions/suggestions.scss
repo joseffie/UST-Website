@@ -1,0 +1,108 @@
+.suggestions {
+  @include adaptive-value('margin-bottom', 180, 80);
+
+  &__header {
+    max-width: 60vw;
+    @include adaptive-value('margin-bottom', 64, 40);
+
+    @media (max-width: $breakpoint1024) {
+      max-width: 100%;
+    }
+  }
+
+  &__title {
+    @include adaptive-value('margin-bottom', 24, 16);
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: rem(64) rem(40);
+    padding: 0;
+    list-style: none;
+    @include adaptive-value('margin-bottom', 64, 40);
+
+    @media (max-width: $breakpoint1024) {
+      gap: rem(50) rem(35);
+    }
+
+    @media (max-width: $breakpoint768) {
+      grid-template-columns: repeat(2, 1fr);
+      gap: rem(35) rem(25);
+    }
+
+    @media (max-width: $breakpoint480) {
+      grid-template-columns: 1fr;
+      gap: rem(50);
+    }
+  }
+
+  &__item {
+    @media (max-width: $breakpoint480) {
+      text-align: center;
+    }
+  }
+
+  &__icon {
+    width: rem(64);
+    height: rem(64);
+    margin-bottom: rem(10);
+    padding-left: rem(13);
+
+    @media (max-width: $breakpoint768) {
+      width: rem(56);
+      height: rem(56);
+    }
+
+    @media (max-width: $breakpoint480) {
+      width: rem(80);
+      height: rem(80);
+      padding: 0;
+    }
+  }
+
+  &__item-title {
+    margin-bottom: rem(10);
+    background-color: $color-main;
+    background-image: $main-gradient;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    // stylelint-disable-next-line property-no-unknown
+    text-fill-color: transparent;
+  }
+
+  &__all-link {
+    display: flex;
+    align-items: center;
+    font-size: rem(14) !important;
+    @include adaptive-value('gap', 24, 8);
+    // stylelint-disable-next-line scss/at-extend-no-missing-placeholder
+    @extend .btn--link;
+
+    @media (max-width: $breakpoint560) {
+      display: block;
+      max-width: 40%;
+      margin: 0 auto;
+      padding: $field-padding-vertical $field-padding-horizontal;
+      color: $color-main;
+      font-weight: 500;
+      background-color: $white;
+      border: 2px solid $color-main;
+
+      @include hover {
+        color: $gray-10;
+        background-color: darken($color-main, 10%);
+        border-color: darken($color-main, 10%);
+      }
+
+      svg {
+        display: none;
+      }
+    }
+
+    @media (max-width: $breakpoint480) {
+      max-width: 70%;
+    }
+  }
+}

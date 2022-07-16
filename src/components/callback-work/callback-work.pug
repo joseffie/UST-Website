@@ -1,0 +1,59 @@
+include ../callback/callback.pug
+
+section.callback.callback-work
+  .callback__header.callback-work__header
+    .container
+      h4.h4-title Возможность
+      h2.h2-title.callback-work__title
+        | Готовы стать частью команды UST?
+      p.text
+        | Если вы хотите стать частью нашей команды, оставьте
+        | свои контакты и мы свяжемся с вами!
+  .container.callback__container
+    .callback__block.callback-work__block
+      form.callback-form__form(action='/')
+        .callback__row.callback__row--bordered.callback-work__row
+          .callback-work-content
+            h5.h5-title.callback-work-content__title
+              | Персональная информация
+            p.text.text--smaller
+              | Расскажите, как к вам обращаться <br>
+              | и как можно связаться с вами.
+          .callback-work-form
+            +callback-input('text', 'Имя *', true)
+            +callback-input('email', 'Электронная почта *', true)
+            +callback-input('tel', 'Телефон *', true)
+        .callback__row.callback__row--bordered.callback-work__row
+          .callback-work-content
+            h5.h5-title.callback-work-content__title
+              | Резюме/портфолио
+            p.text.text--smaller
+              | Загрузите сюда свое резюме и/или <br>
+              | прикрепите ссылку на портфолио.
+          .callback-work-form
+            .callback-work-form__file-block
+              .callback-form__file-input-wrap
+                +btn('', 'no-bg', true)(class='callback-form__file-input', type='file', name='callback-file-input')
+                label.callback-form__file-label(for='callback-file-input')
+                  span.callback-form__file-btn-text Добавить файл
+              p.text.text--smallest.callback-work-form__file-tip
+                | Мы принимаем файлы PDF, DOCX, JPG, и PNG
+            +callback-input('text', 'Ссылка на портфолио')
+        .callback__row.callback__row--bordered.callback-work__row
+          .callback-work-content
+            h5.h5-title.callback-work-content__title
+              | Вопросы
+            p.text.text--smaller
+              | Пожалуйста, ответьте на вопросы.
+          .callback-work-form
+            +callback-textarea('Сопроводительное письмо')
+            +callback-submit-warning()(class='callback-form__submit-warning--bg-on-pc')
+              | Ваши персональные данные обрабатываются в
+              | соответствии с нашей
+              | <a class='link' href='#'>Политикой
+              | конфиденциальности</a>
+        .callback__row.callback__row--bordered.callback__row--phantom-before.callback-work__row
+          .callback-work-form
+            .callback-form__submit-wrap.callback-project-form__submit-wrap
+              +callback-tip()
+              +btn('Подать заявку', 'rounded-on-mobile')(class='callback-project-form__submit', type='submit')

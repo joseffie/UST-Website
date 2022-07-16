@@ -1,0 +1,51 @@
+include ../burger/burger.pug
+
+mixin menuItem(item)
+  - var activeClass = menuHref === item.link ? " is-active" : "";
+  - item.subitems ? activeClass += "main-nav__item--parent" : null;
+    li.main-nav__item(class= activeClass)
+      if (typeof(item.link) !== 'undefined' && item.link)
+        a(href = item.link)!= item.text
+      else
+        a(href = '#')!= item.text
+
+      if block
+        block
+
+mixin navMenu(hasBurger = true)
+
+  //- Takes on:
+  //- hasBurger { true / false } - if set to true, then a burger menu appears at a certain width
+
+  if (typeof(hasBurger) !== 'undefined' && hasBurger)
+    nav.main-nav(data-burger-nav)
+      .main-nav__mobile-header
+        +btn('')(class='header__search-btn')
+          svg(viewBox='0 0 28 28', fill='none', xmlns='http://www.w3.org/2000/svg')
+            path(d='M17.7072 18.2929L25.4854 26.0711M21.0001 11.5C21.0001 16.7467 16.7468 21 11.5001 21C6.25342 21 2.00012 16.7467 2.00012 11.5C2.00012 6.25329 6.25342 2 11.5001 2C16.7468 2 21.0001 6.25329 21.0001 11.5Z')
+        +burger()
+      ul.main-nav__list
+        each item in mainmenuData
+          +menuItem(item)
+
+            if (item.subitems)
+              ul.main-nav__dropdown
+                each subitem in item.subitems
+                  +menuItem(subitem)
+      block
+  else
+    nav.main-nav
+      .main-nav__mobile-header
+        +btn('')(class='header__search-btn')
+          svg(viewBox='0 0 28 28', fill='none', xmlns='http://www.w3.org/2000/svg')
+            path(d='M17.7072 18.2929L25.4854 26.0711M21.0001 11.5C21.0001 16.7467 16.7468 21 11.5001 21C6.25342 21 2.00012 16.7467 2.00012 11.5C2.00012 6.25329 6.25342 2 11.5001 2C16.7468 2 21.0001 6.25329 21.0001 11.5Z')
+        +burger()
+      ul.main-nav__list
+        each item in mainmenuData
+          +menuItem(item)
+
+            if (item.subitems)
+              ul.main-nav__dropdown
+                each subitem in item.subitems
+                  +menuItem(subitem)
+      block

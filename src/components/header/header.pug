@@ -1,0 +1,30 @@
+include ../burger/burger.pug
+include ../main-nav/main-nav.pug
+
+header.header
+  .container
+    .header__row
+      include ../logo/logo.pug
+
+      +burger()(id='burger-original')
+
+      +navMenu()
+        .main-nav__mobile-socials-wrap
+          .main-nav__mobile-socials
+            a.main-nav__mobile-social(href='#')
+              svg(width='32', height='32')
+                use(xlink:href='@img/sprite.svg#linkedin-blue')
+            a.main-nav__mobile-social(href='#')
+              svg(width='32', height='32')
+                use(xlink:href='@img/sprite.svg#google-blue')
+          .main-nav__mobile-socials
+            a.main-nav__mobile-social(href='#')
+              svg(width='32', height='32')
+                use(xlink:href='@img/sprite.svg#facebook-blue')
+            a.main-nav__mobile-social(href='#')
+              svg(width='32', height='32')
+                use(xlink:href='@img/sprite.svg#dribble-blue')
+
+      +btn('')(class='header__search-btn')
+        svg(viewBox='0 0 28 28', fill='none', xmlns='http://www.w3.org/2000/svg')
+          path(d='M17.7072 18.2929L25.4854 26.0711M21.0001 11.5C21.0001 16.7467 16.7468 21 11.5001 21C6.25342 21 2.00012 16.7467 2.00012 11.5C2.00012 6.25329 6.25342 2 11.5001 2C16.7468 2 21.0001 6.25329 21.0001 11.5Z')

@@ -1,0 +1,53 @@
+.prefooter-portfolio {
+  padding: 25vh 0;
+  line-height: 0;
+  vertical-align: middle;
+  background-color: $gray-100;
+  background-image: url('../img/prefooter-bgs/bg2.webp');
+  background-image: url('../img/prefooter-bgs/bg2.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @media (max-width: $breakpoint640) {
+    padding: 20vh 0;
+  }
+
+  .btn {
+    @media (max-width: $breakpoint480) {
+      display: block;
+    }
+  }
+
+  &__inner {
+    max-width: 50%;
+
+    @media (max-width: $breakpoint1248) {
+      max-width: 65%;
+    }
+
+    @media (max-width: $breakpoint768) {
+      max-width: 80%;
+    }
+
+    @media (max-width: $breakpoint560) {
+      max-width: 100%;
+    }
+  }
+
+  &__header {
+    color: $white;
+    @include adaptive-value('margin-bottom', 24, 40);
+
+    * {
+      color: inherit;
+    }
+  }
+
+  &__label {
+    margin-bottom: rem(8);
+  }
+
+  &__title {
+    @include adaptive-value('margin-bottom', 24, 16);
+  }
+}

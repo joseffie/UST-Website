@@ -1,0 +1,39 @@
+.faq {
+  @include adaptive-value('margin-bottom', 180, 80);
+
+  &__header {
+    @include adaptive-value('margin-bottom', 64, 24);
+  }
+
+  &__title {
+    margin-top: rem(8);
+
+    @media (max-width: $breakpoint640) {
+      br {
+        display: none;
+      }
+    }
+
+    .mobile-br {
+      display: none;
+
+      @media (max-width: $breakpoint400) {
+        display: block;
+      }
+    }
+  }
+}
+
+.faq-accordion {
+  &__btn {
+    &.active::after {
+      transform: rotate(135deg);
+    }
+
+    &::after {
+      min-width: rem(18);
+      height: rem(18);
+      background: url('../img/plus-icon.svg') center center no-repeat;
+    }
+  }
+}

@@ -1,0 +1,107 @@
+.callback-project {
+  @include adaptive-value('margin-bottom', 110, 40);
+
+  @media (max-width: $breakpoint480) {
+    margin-bottom: 0;
+  }
+
+  &__header {
+    color: $gray-10;
+    background-color: $gray-100;
+    background-image: url('../img/project-bg.webp');
+    background-image: url('../img/project-bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    * {
+      color: inherit;
+    }
+  }
+
+  &__title {
+    margin: rem(4) 0 rem(18) 0;
+  }
+
+  &__block {
+    background-color: $gray-10;
+  }
+
+  &__row {
+    @media (max-width: $breakpoint1024) {
+      flex-wrap: wrap;
+      gap: rem(16);
+    }
+  }
+}
+
+// BLOCK: Callback-Content and Callback-Form Blocks
+.callback-project-content,
+.callback-project-form {
+  flex: 0 1 50%;
+
+  @media (max-width: $breakpoint1024) {
+    flex: 1 1 100%;
+  }
+}
+
+// BLOCK: Callback-Content Block
+.callback-project-content {
+  &__title {
+    @include adaptive-value('margin-bottom', 8, 4);
+  }
+}
+
+.callback-project-form {
+  &__btn-wrap {
+    margin-bottom: rem(20);
+
+    @media (max-width: $breakpoint480) {
+      display: flex;
+      gap: rem(14);
+      align-items: center;
+    }
+
+    .btn {
+      background-color: $gray-10;
+
+      @media (max-width: $breakpoint480) {
+        flex: 1 1 auto;
+        padding: rem(8) rem(16);
+      }
+    }
+  }
+
+  &__approximate-time {
+    display: none;
+    margin: 0;
+    color: $gray-60;
+    font-weight: 400;
+    font-size: 11px;
+    font-family: $font-family;
+
+    @media (max-width: $breakpoint480) {
+      display: inline-block;
+      flex: 0 1 40%;
+    }
+  }
+
+  &__submit-wrap {
+    @media (max-width: $breakpoint1024) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    @media (max-width: $breakpoint480) {
+      display: block;
+      text-align: left;
+    }
+  }
+
+  &__submit {
+    @media (max-width: $breakpoint480) {
+      display: block;
+      width: 100%;
+    }
+  }
+}

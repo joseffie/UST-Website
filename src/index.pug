@@ -1,0 +1,26 @@
+extends base/pug/base.pug
+
+include ./components/callback-message/callback-message.pug
+
+append variables
+  -
+    var title = 'Главная | Union Smart Technology'
+    var menuHref = '/'
+
+
+block content
+  include ./components/mainscreen-index/mainscreen-index.pug
+
+  include ./components/why/why.pug
+
+  include ./components/suggestions/suggestions.pug
+
+  include ./components/portfolio/portfolio.pug
+
+  include ./components/benefits/benefits.pug
+
+  +callback-message-block()
+
+  include ./components/clients/clients.pug
+
+  include ./components/faq/faq.pug

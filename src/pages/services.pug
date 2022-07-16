@@ -1,0 +1,23 @@
+extends ../base/pug/base.pug
+
+include ../components/callback-project/callback-project.pug
+
+append variables
+  -
+    var title = 'Сервисы | Union Smart Technology'
+
+block content
+  include ../components/mainscreen-services/mainscreen-services.pug
+
+  include ../components/cooperation/cooperation.pug
+
+  include ../components/services-section/services-section.pug
+
+  include ../components/what-we-do/what-we-do.pug
+
+  include ../components/add-services/add-services.pug
+
+  +callback-project-block()
+
+prepend script
+  script(src='https://unpkg.com/swiper@8/swiper-bundle.min.js')

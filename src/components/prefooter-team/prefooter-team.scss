@@ -1,0 +1,37 @@
+.prefooter-team {
+  padding: 25vh 0;
+  line-height: 0;
+  vertical-align: middle;
+  background-color: $gray-100;
+  background-image: url('../img/prefooter-bgs/bg1.webp');
+  background-image: url('../img/prefooter-bgs/bg1.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @media (max-width: $breakpoint640) {
+    padding: 20vh 0;
+  }
+
+  .btn {
+    @media (max-width: $breakpoint480) {
+      display: block;
+    }
+  }
+
+  &__header {
+    color: $white;
+    @include adaptive-value('margin-bottom', 64, 40);
+
+    @media (max-width: $breakpoint480) {
+      text-align: center;
+    }
+
+    * {
+      color: inherit;
+    }
+  }
+
+  &__label {
+    @include adaptive-value('margin-bottom', 8, 4);
+  }
+}

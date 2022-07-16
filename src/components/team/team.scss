@@ -1,0 +1,98 @@
+.team {
+  @include adaptive-value('margin-bottom', 180, 80);
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: rem(40) rem(40);
+    align-items: center;
+
+    @media (max-width: $breakpoint480) {
+      gap: rem(40) 0;
+    }
+  }
+
+  &__header {
+    grid-column: 6 span;
+
+    @media (max-width: $breakpoint1024) {
+      grid-column: 8 span;
+    }
+
+    @media (max-width: $breakpoint640) {
+      grid-column: 12 span;
+    }
+  }
+
+  &__title {
+    @include adaptive-value('margin-bottom', 24, 16);
+  }
+
+  &__item {
+    grid-column: 3 span;
+    text-align: center;
+
+    @media (max-width: $breakpoint1024) {
+      grid-column: 4 span;
+    }
+
+    @media (max-width: $breakpoint640) {
+      grid-column: 6 span;
+    }
+
+    @media (max-width: $breakpoint480) {
+      grid-column: 12 span;
+
+      &:nth-last-child(-n + 2) {
+        display: none;
+      }
+    }
+  }
+
+  &__pic {
+    position: relative;
+    display: inline-block;
+    max-height: 100%;
+    margin-bottom: rem(16);
+    overflow: hidden;
+    user-select: none;
+
+    img {
+      display: block;
+      transition: transform 0.5s ease;
+
+      @include hover {
+        transform: scale(1.15);
+      }
+    }
+  }
+
+  &__linkedin-tag {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+
+    @media (max-width: $breakpoint1024) {
+      top: 22px;
+      right: 22px;
+      width: 28px;
+      height: 28px;
+    }
+
+    @media (max-width: $breakpoint768) {
+      top: 16px;
+      right: 16px;
+    }
+  }
+
+  &__name {
+    margin-bottom: rem(4);
+    color: $color-blue-100;
+  }
+
+  &__btn-wrap {
+    display: flex;
+    justify-content: center;
+    margin-top: rem(50);
+  }
+}

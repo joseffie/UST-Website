@@ -1,0 +1,51 @@
+section.portfolio
+  .portfolio__header
+    .container
+      .portfolio__header-body
+        h4.h4-title Портфолио
+        h2.h2-title.portfolio__title Завершённые проекты
+        p.text
+          | Мы специализируемся на предоставлении программного обеспечения высшего
+          | качества и предоставлении высококвалифицированных команд с опытом
+          | в области разработки блокчейнов, аналитики больших данных и AI/ML,
+          | а также услуг по разработке программного обеспечения на заказ.
+  .container
+    ul.portfolio__grid
+      li.portfolio-item
+        a.portfolio-item__img-link(href='#')
+          img.portfolio-item__img(src='@img/portfolio/pic5.png', alt='Мобильный контроль')
+        a.h5-title.portfolio-item__title(href='#') Мобильный контроль
+        p.text.text--small Сервис для работы с клиентами и партнерами
+
+      li.portfolio-item
+        a.portfolio-item__img-link(href='#')
+          img.portfolio-item__img(src='@img/portfolio/pic2.png', alt='Голосовое управление')
+        a.h5-title.portfolio-item__title(href='#') Голосовое управление
+        p.text.text--small Сервис для работы по задачам
+
+      li.portfolio-item
+        a.portfolio-item__img-link(href='#')
+          img.portfolio-item__img(src='@img/portfolio/pic4.png', alt='Vroomgames')
+        a.h5-title.portfolio-item__title(href='#') Vroomgames
+        p.text.text--small Сервис для работы со списками заказов
+
+      li.portfolio-item
+        a.portfolio-item__img-link(href='#')
+          img.portfolio-item__img(src='@img/portfolio/pic3.png', alt='ATOL-бонус')
+        a.h5-title.portfolio-item__title(href='#') ATOL-бонус
+        p.text.text--small Мобильное приложение для профессионалов
+
+      li.portfolio-item.portfolio-item--wide
+        a.portfolio-item__img-link(href='#')
+          img.portfolio-item__img(src='@img/portfolio/pic1-wide.png', alt='Прораб X')
+        a.h5-title.portfolio-item__title(href='#') Prorab-x
+        p.text.text--small Мобильное приложение для строителей
+
+      li.portfolio-item.portfolio-item--wide
+        a.portfolio-item__img-link(href='#')
+          img.portfolio-item__img(src='@img/portfolio/pic7-wide.png', alt='Актуаль')
+        a.h5-title.portfolio-item__title(href='#') Актуаль
+        p.text.text--small Сайт с промо-играми
+    .portfolio__buttons
+      +btn('Портфолио', 'no-bg,transparent-on-mobile')(id='portfolio-btn-1', class='portfolio__btn', href='#')
+      +btn('Заказать проект')(id='portfolio-btn-2', class='portfolio__btn', href='#')

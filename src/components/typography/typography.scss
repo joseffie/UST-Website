@@ -1,0 +1,146 @@
+// Titles
+.h1-title,
+.h2-title,
+.h3-title,
+.h6-title {
+  font-weight: 700;
+  font-family: $font-family--primary;
+}
+
+.h2-title,
+.h3-title,
+.h4-title,
+.h5-title,
+.h6-title {
+  line-height: 120%;
+}
+
+.h1-title {
+  color: $gray-10;
+  line-height: 110%;
+  text-transform: uppercase;
+  @include adaptive-font(68, 36);
+
+  &--smaller {
+    text-transform: none;
+    @include adaptive-font(62, 30);
+  }
+
+  &--primary {
+    font-weight: 350;
+    font-family: $font-family--primary-narrow;
+    line-height: 100%;
+    letter-spacing: 0.02em;
+    text-transform: none;
+    @include adaptive-font(74, 36);
+
+    span {
+      color: $color-main;
+    }
+  }
+}
+
+.h2-title {
+  color: $color-blue-100;
+  @include adaptive-font(62, 30);
+
+  &--center {
+    text-align: center;
+  }
+}
+
+.h3-title {
+  @include adaptive-font(36, 20);
+
+  &--bigger {
+    @include adaptive-font(54, 18);
+  }
+}
+
+.h4-title {
+  color: $color-blue-80;
+  font-weight: 350;
+  @include adaptive-font(26, 18);
+}
+
+.h5-title {
+  font-weight: 500;
+  @include adaptive-font(22, 18);
+}
+
+.h6-title {
+  text-transform: uppercase;
+  @include adaptive-font(16, 12);
+
+  @media (max-width: $breakpoint560) {
+    font-family: $font-family--secondary;
+  }
+}
+
+// Buttons and links
+.link {
+  color: $color-pink-80;
+  font-weight: 325;
+  font-size: rem(11);
+  font-family: $font-family--primary;
+  text-transform: uppercase;
+  transition: color 0.3s ease;
+
+  @include hover {
+    color: $color-pink-100;
+  }
+}
+
+// Text
+.text {
+  font-weight: 325;
+  font-family: $font-family--primary;
+  line-height: 130%;
+  @include adaptive-value('margin-bottom', 8, 5);
+  @include adaptive-font(20, 14);
+
+  @media (max-width: $breakpoint768) {
+    font-weight: 400;
+    font-family: $font-family--secondary;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &--small {
+    @include adaptive-font(18, 12, '!important');
+  }
+
+  &--smaller,
+  &--smallest,
+  &--label {
+    margin-bottom: 0;
+  }
+
+  &--smaller {
+    @include adaptive-font(16, 11, '!important');
+  }
+
+  &--smallest {
+    font-size: rem(11) !important;
+
+    @media (max-width: $breakpoint768) {
+      font-weight: 400;
+      font-family: $font-family;
+    }
+  }
+
+  &--label {
+    @include adaptive-font(16, 12, '!important');
+
+    @media (max-width: $breakpoint768) {
+      font-weight: 400;
+      font-family: $font-family;
+    }
+  }
+
+  &--rubik-font {
+    font-family: $font-family--secondary;
+  }
+}

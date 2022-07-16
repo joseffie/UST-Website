@@ -1,0 +1,10 @@
+extends ../base/pug/base.pug
+
+include ../components/callback-project/callback-project.pug
+
+append variables
+  -
+    var title = 'Портфолио | Union Smart Technology'
+
+block content
+  +callback-project-block()(class='callback--mainscreen')

@@ -1,0 +1,28 @@
+mixin callback-input($inputType, $inputPlaceholder, $isRequired = false)
+  if ($isRequired == true)
+    input.callback-form__input(type=$inputType, placeholder!=$inputPlaceholder, required)&attributes(attribute)
+  else
+    input.callback-form__input(type=$inputType, placeholder!=$inputPlaceholder)&attributes(attribute)
+
+mixin callback-textarea($fieldPlaceholder, $isRequired = false)
+  if ($isRequired == true)
+    textarea.callback-form__textarea(placeholder!=$fieldPlaceholder, required)
+  else
+    textarea.callback-form__textarea(placeholder!=$fieldPlaceholder)
+
+mixin callback-submit-warning($isMobile = false)
+
+  if ($isMobile == true)
+    p.text.text--smallest.callback-form__submit-warning.callback-form__submit-warning--mobile()&attributes(attributes)
+      block
+  else
+    p.text.text--smallest.callback-form__submit-warning()&attributes(attributes)
+      block
+
+mixin callback-tip()
+  p.text.text--smallest.callback-form__tip
+    span.text--label.required-star *
+    span.text--smallest обязательные поля для заполнения
+
+    if block
+      block

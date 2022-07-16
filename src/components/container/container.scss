@@ -1,0 +1,21 @@
+.container {
+  width: $container-width;
+  margin: 0px auto;
+  padding: 0px $container-offset;
+
+  @media (max-width: $container-width) {
+    width: 1247.98px;
+  }
+
+  @media (max-width: $breakpoint1248) {
+    width: 1023.98px;
+  }
+
+  @media (max-width: $breakpoint1024) {
+    width: 767.98px;
+  }
+
+  @media (max-width: $breakpoint768) {
+    width: 100%;
+  }
+}

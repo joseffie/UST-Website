@@ -1,0 +1,85 @@
+.add-services {
+  padding: rem(110) 0;
+  background-color: $color-blue-10;
+
+  @media (max-width: $breakpoint768) {
+    padding: rem(80) 0;
+  }
+
+  &__title {
+    @include adaptive-value('margin-bottom', 64, 24);
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: rem(40);
+    padding: 0;
+    list-style: none;
+
+    @media (max-width: $breakpoint1248) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (max-width: $breakpoint1024) {
+      grid-template-columns: 1fr;
+    }
+
+    @media (max-width: $breakpoint560) {
+      gap: rem(16);
+    }
+  }
+
+  &__item {
+    display: flex;
+    align-items: stretch;
+    background-color: $white;
+
+    @media (max-width: $breakpoint560) {
+      align-items: center;
+      background-color: inherit;
+
+      &::before {
+        display: inline-block;
+        width: 27px;
+        height: 24px;
+        margin-right: rem(10);
+        background: url('../img/checkbox.svg') no-repeat;
+        background-size: cover;
+        content: '';
+      }
+    }
+  }
+
+  &__icon-block {
+    display: flex;
+    flex: 0 1 40%;
+    align-items: center;
+    justify-content: center;
+    padding: rem(50) rem(45);
+    background: $main-gradient;
+
+    @media (max-width: $breakpoint560) {
+      display: none;
+    }
+  }
+
+  &__name-block {
+    display: flex;
+    flex: 0 1 60%;
+    align-items: center;
+    padding: rem(50) rem(35);
+
+    @media (max-width: $breakpoint560) {
+      display: inline-block;
+      flex: 1 1 100%;
+      align-items: start;
+      padding: rem(5) 0;
+
+      * {
+        font-weight: 400;
+        font-family: $font-family--secondary;
+      }
+    }
+  }
+}

@@ -1,0 +1,155 @@
+.portfolio {
+  @include adaptive-value('margin-bottom', 180, 80);
+
+  &__header {
+    padding-bottom: rem(264);
+    text-align: center;
+    background-color: $color-blue-10;
+    @include adaptive-value('padding-top', 113, 40);
+
+    @media (max-width: $breakpoint480) {
+      padding-bottom: rem(130);
+      text-align: left;
+    }
+  }
+
+  &__header-body {
+    max-width: 60%;
+    margin: 0 auto;
+
+    @media (max-width: $breakpoint1024) {
+      max-width: 75%;
+    }
+
+    @media (max-width: $breakpoint768) {
+      max-width: 100%;
+    }
+  }
+
+  &__title {
+    @include adaptive-value('margin-bottom', 24, 16);
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: rem(40);
+    max-width: 100%;
+    margin-top: rem(-200);
+    padding: 0;
+    list-style: none;
+
+    @media (max-width: $breakpoint480) {
+      gap: rem(64) 0;
+      margin-top: rem(-90);
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    gap: rem(24);
+    align-items: center;
+    justify-content: center;
+    max-width: 50%;
+    margin: 0 auto;
+    @include adaptive-value('margin-top', 64, 40);
+
+    @media (max-width: $breakpoint1024) {
+      max-width: 75%;
+    }
+
+    @media (max-width: $breakpoint560) {
+      max-width: 85%;
+    }
+
+    @media (max-width: $breakpoint480) {
+      flex-wrap: wrap;
+      max-width: 100%;
+    }
+  }
+
+  &__btn {
+    flex: 0 1 50%;
+
+    @media (max-width: $breakpoint480) {
+      flex-basis: 100%;
+    }
+
+    &#portfolio-btn-1 {
+      @media (max-width: $breakpoint480) {
+        order: 2;
+      }
+    }
+
+    &#portfolio-btn-2 {
+      @media (max-width: $breakpoint480) {
+        order: 1;
+      }
+    }
+  }
+}
+
+.portfolio-item {
+  grid-column: 3 span;
+
+  @media (max-width: $breakpoint1024) {
+    grid-column: 6 span;
+  }
+
+  @media (max-width: $breakpoint480) {
+    grid-column: 12 span;
+  }
+
+  .text {
+    @media (max-width: $breakpoint480) {
+      text-align: center;
+    }
+  }
+
+  &__img-link {
+    display: inline-block;
+    overflow: hidden;
+    color: inherit;
+    text-decoration: none;
+
+    @include hover {
+      img {
+        transform: scale(1.15);
+      }
+    }
+  }
+
+  &__img {
+    display: block;
+    object-fit: cover;
+    transition: transform 0.7s ease;
+  }
+
+  &__title {
+    display: inherit;
+    margin: rem(4) 0;
+    color: $color-blue-80;
+    text-decoration: none;
+    transition: color 0.2s ease;
+
+    @include hover {
+      color: $color-blue-100;
+    }
+
+    @media (max-width: $breakpoint480) {
+      text-align: center;
+    }
+  }
+
+  &--wide {
+    grid-column: 6 span;
+
+    @media (max-width: $breakpoint1024) {
+      grid-column: 12 span;
+    }
+
+    @media (max-width: $breakpoint480) {
+      display: none;
+    }
+  }
+}

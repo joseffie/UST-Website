@@ -1,0 +1,14 @@
+extends ../base/pug/base.pug
+
+append variables
+  -
+    var title = 'Портфолио | Union Smart Technology'
+
+block content
+  include ../components/mainscreen-portfolio/mainscreen-portfolio.pug
+
+  include ../components/full-portfolio/full-portfolio.pug
+
+  include ../components/clients/clients.pug
+
+  include ../components/prefooter-portfolio/prefooter-portfolio.pug

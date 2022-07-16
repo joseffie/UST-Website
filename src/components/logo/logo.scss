@@ -1,0 +1,43 @@
+.logo {
+  display: flex;
+  gap: rem(15);
+  align-items: center;
+  font-family: $font-family--logo;
+  text-decoration: none;
+
+  @media (max-width: $breakpoint400) {
+    gap: rem(11);
+  }
+
+  &__img {
+    @media (max-width: $breakpoint768) {
+      width: rem(65);
+    }
+
+    @media (max-width: $breakpoint400) {
+      width: rem(40);
+    }
+  }
+
+  &__name,
+  &__slogan {
+    display: block;
+    line-height: 120%;
+  }
+
+  &__name {
+    color: $gray-20;
+    font-weight: 600;
+    @include adaptive-font(24, 14);
+    @include adaptive-value('margin-bottom', 8, 5);
+  }
+
+  &__slogan {
+    color: $gray-60;
+    @include adaptive-font(15, 10);
+
+    @media (max-width: $breakpoint480) {
+      color: $gray-20;
+    }
+  }
+}
